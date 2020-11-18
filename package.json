@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-mocha-puppeteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "mochawesome": "node ./node_modules/mocha/bin/mocha --timeout=90000 ./tests/my.test.js --reporter mochawesome --reporter-options reportDir=Reports,reportFilename=report.html",
+    "start": "node ./node_modules/mocha/bin/mocha --timeout=90000 ./tests/my.test.js --reporter mocha-allure-reporter --reporter mocha-multi --reporter-options spec=- ",
+    "report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "allure": "0.0.0",
+    "mocha": "^8.2.1",
+    "mocha-allure-reporter": "^1.4.0",
+    "mocha-html-reporter": "0.0.1",
+    "puppeteer": "^5.4.1"
+  },
+  "devDependencies": {
+    "mocha-multi": "^1.1.3",
+    "mocha-simple-html-reporter": "^1.1.0",
+    "mochawesome": "^6.2.1"
+  }
+}

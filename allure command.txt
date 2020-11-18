@@ -1,0 +1,6 @@
+npm install mocha-allure-reporter 
+npm install -g allure-commandline --save-dev
+npm start --reporter mocha-allure-reporter"
+npx allure generate allure-results --clean -o allure-report
+npx allure serve
+
